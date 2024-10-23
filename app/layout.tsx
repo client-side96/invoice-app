@@ -31,8 +31,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${leagueSpartan.variable}`}>
-      <body className="flex flex-col md:flex-row">
+    <html lang="en" className={`${leagueSpartan.variable} h-full`}>
+      <body className="flex flex-col md:flex-row h-full bg-background-light">
         <Header />
         <main>{children}</main>
       </body>
