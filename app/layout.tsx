@@ -1,17 +1,6 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+import { Header } from "./_components/organisms/Header";
 
 export const metadata: Metadata = {
   title: "Invoices",
@@ -25,6 +14,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <body className="flex flex-col md:flex-row">
+        <Header />
         <main>{children}</main>
       </body>
     </html>
