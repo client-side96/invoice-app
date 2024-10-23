@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["var(--font-league-spartan)"],
+      },
       colors: {
         violet: {
           250: "#9277FF",

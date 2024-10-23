@@ -1,6 +1,24 @@
 import type { Metadata } from "next";
+import localFont from "next/font/local";
 import "./globals.css";
 import { Header } from "./_components/organisms/Header";
+
+const leagueSpartan = localFont({
+  variable: "--font-league-spartan",
+  display: "swap",
+  src: [
+    {
+      path: "./_fonts/LeagueSpartan-Medium.ttf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "./_fonts/LeagueSpartan-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+});
 
 export const metadata: Metadata = {
   title: "Invoices",
@@ -13,7 +31,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${leagueSpartan.variable}`}>
       <body className="flex flex-col md:flex-row">
         <Header />
         <main>{children}</main>
